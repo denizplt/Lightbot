@@ -3,11 +3,11 @@
 
 import numpy as np # Before necessary information is defined, zero matrices are created by using numpy library.
 
-# Class for information about height
+# class for information about height
 class HeightInfo:
     def __init__(self, position, number):
-        self.position = position # Position of heights 
-        self.number = number # Number of heights
+        self.position = position # position of heights 
+        self.number = number # number of heights
 
     def create_height_matrix(self): 
         if len(self.position) != len(self.number): # Just in case lists of positions and numbers of heights are not equal.
@@ -26,10 +26,10 @@ class HeightInfo:
         return height_matrix
     
 
-# Class for information about light 
+# class for information about light 
 class LightInfo:
     def __init__(self, light_positions):
-        self.light_positions = light_positions # Position of lights
+        self.light_positions = light_positions # position of lights
     
     def create_light_matrix(self):
         light_matrix = np.zeros((10, 10), dtype=int)
@@ -37,17 +37,17 @@ class LightInfo:
             light_matrix[j[0], j[1]] = 1 
         return light_matrix
     
-# Examples for test (For every level, this information is updated.)
+# examples for test (For every level, this information is updated.)
 #positions = [(2, 3), (4, 5), (6, 7)]
 #heights = [1, 2, 3]
 
 #lights = [(2, 3), (4, 5)]
 
-# Object of height information
+# object of height information
 #height_info = HeightInfo(positions, heights)
 #height_matrix = height_info.create_height_matrix()
 
-# Object of light information
+# object of light information
 #light_info = LightInfo(lights)
 #light_matrix = light_info.create_light_matrix()
 
